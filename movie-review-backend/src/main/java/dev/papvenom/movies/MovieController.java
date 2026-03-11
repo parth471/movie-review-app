@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @CrossOrigin(origins = {
     "http://localhost:5173",
-    "https://movie-review-frontend-rho.vercel.app"
+    "https://movie-review-app-gules.vercel.app/"
 })
 @RestController
 @RequestMapping("/api/v1/movies")
