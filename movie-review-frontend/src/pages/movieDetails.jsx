@@ -29,7 +29,7 @@ function MovieDetails() {
   useEffect(() => {
     axios
       .get(
-        `https://movie-review-backend-1r30.onrender.com/api/v1/movies/${imdbId}`
+        `https://movie-review-app-vado.onrender.com/api/v1/movies/${imdbId}`
       )
       .then((res) => setMovie(res.data))
       .catch(() => console.error("Failed to load movie"));
@@ -46,7 +46,7 @@ function MovieDetails() {
   const fetchReviews = async (imdbId) => {
     try {
       const res = await fetch(
-        `https://movie-review-backend-1r30.onrender.com/api/v1/reviews/${imdbId}`
+        `https://movie-review-app-vado.onrender.com/api/v1/reviews/${imdbId}`
       );
       const data = await res.json();
       setReviews(data);
@@ -72,7 +72,7 @@ function MovieDetails() {
 
     try {
       await fetch(
-        "https://movie-review-backend-1r30.onrender.com/api/v1/reviews",
+        "https://movie-review-app-vado.onrender.com/api/v1/reviews",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
